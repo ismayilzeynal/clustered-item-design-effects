@@ -1,0 +1,507 @@
+{
+  "meta": {
+    "seed": 20260711,
+    "dataset": "Eedi NeurIPS-2020 Task1&2 (primary), Task3&4 (replication)",
+    "cluster_unit": "GroupId (classroom)",
+    "estimand": "item-level ICC of IsCorrect within classroom, and design effect on item difficulty/discrimination"
+  },
+  "sample": {
+    "n_responses": 15867850,
+    "n_items_total": 27613,
+    "n_items_primary": 15717,
+    "n_groups": 11838,
+    "n_students": 118971,
+    "overall_correct_rate": 0.643,
+    "median_responses_per_item": 740.0,
+    "median_groups_per_item": 93.0,
+    "median_mstar": 20.0,
+    "inclusion": "N>=200 responses & >=20 groups & 0.02<=p<=0.98"
+  },
+  "H1_icc": {
+    "median": 0.1321,
+    "ci95": [
+      0.131,
+      0.133
+    ],
+    "threshold": 0.05,
+    "supported": true,
+    "quantiles": {
+      "p5": 0.0437,
+      "p10": 0.064,
+      "p25": 0.096,
+      "p50": 0.1321,
+      "p75": 0.1718,
+      "p90": 0.2126,
+      "p95": 0.2404
+    },
+    "pct_items_gt_0.05": 0.9373
+  },
+  "H2_deff_formula": {
+    "median": 3.627,
+    "ci95": [
+      3.595,
+      3.659
+    ],
+    "threshold": 1.5,
+    "supported": true,
+    "quantiles": {
+      "p5": 1.726,
+      "p10": 2.071,
+      "p25": 2.747,
+      "p50": 3.627,
+      "p75": 4.836,
+      "p90": 6.471,
+      "p95": 8.082
+    },
+    "pct_items_gt_1.5": 0.9702,
+    "pct_items_gt_2": 0.9114,
+    "median_n_eff_ratio": 0.2754
+  },
+  "deff_resampling": {
+    "n_items": 1500,
+    "DEFF_bootstrap_median": 2.925,
+    "DEFF_linearization_median": 2.943,
+    "DEFF_formula_median_same_context": 3.657,
+    "corr_DEFF_boot_vs_formula": 0.554,
+    "corr_sqrtDEFF_boot_vs_formula": 0.639,
+    "corr_boot_vs_linearization": 0.996,
+    "median_ratio_boot_over_formula": 0.84,
+    "note": "Two independent variance estimators (cluster bootstrap, Taylor linearization) agree; the Kish formula on burden-weighted m* runs ~19% higher."
+  },
+  "H3_coverage": {
+    "100": {
+      "naive_coverage": 0.728909,
+      "cluster_coverage": 0.846558,
+      "naive_width": 0.16911246660013218,
+      "cluster_width": 0.25564135089275,
+      "mean_signed_error": -0.007505385031829641,
+      "mean_abs_signed_error": 0.06229454940912181,
+      "mean_clusters_drawn": 12.605458,
+      "R": 2000,
+      "n_items": 500
+    },
+    "200": {
+      "naive_coverage": 0.712095,
+      "cluster_coverage": 0.870796,
+      "naive_width": 0.12228971237551546,
+      "cluster_width": 0.19622855306145262,
+      "mean_signed_error": -0.00336005392118232,
+      "mean_abs_signed_error": 0.04820065443990151,
+      "mean_clusters_drawn": 23.907289,
+      "R": 2000,
+      "n_items": 500
+    },
+    "400": {
+      "naive_coverage": 0.692722,
+      "cluster_coverage": 0.904453,
+      "naive_width": 0.0879306271443647,
+      "cluster_width": 0.15501255138875167,
+      "mean_signed_error": -5.361714274178748e-05,
+      "mean_abs_signed_error": 0.03643373166428546,
+      "mean_clusters_drawn": 46.054308,
+      "R": 2000,
+      "n_items": 500
+    }
+  },
+  "iid_coverage_baseline": {
+    "coverage_by_n": {
+      "100": 0.9436,
+      "200": 0.9469,
+      "400": 0.9484
+    },
+    "R": 2000,
+    "n_items": 500,
+    "note": "Naive binomial 95% CI under i.i.d. sampling of the SAME items/budgets; near-nominal here means the whole-class undercoverage (~71%) is the clustering, not the Wald interval form."
+  },
+  "perm_null": {
+    "n_items": 1000,
+    "obs_icc_median": 0.12888957133455647,
+    "null_icc_median": 0.03190021923185249,
+    "null_icc_mean": 0.03578557406861793,
+    "frac_obs_gt_null95": 0.938,
+    "frac_sig_BH": 0.937,
+    "median_pval": 0.000999000999000999
+  },
+  "discrimination": {
+    "n_items": 1000,
+    "disc_median": 0.3856382522022431,
+    "DEFF_disc_median": 1.4154029787303133,
+    "DEFF_disc_p25": 1.1676448206893961,
+    "DEFF_disc_p75": 1.817062487763345,
+    "pct_DEFF_disc_gt_1.5": 0.429
+  },
+  "min_n_table": [
+    {
+      "target_SE": 0.02,
+      "ref_p": 0.5,
+      "iid_N": 625,
+      "corrected_N_resampling": 1829,
+      "corrected_N_formula": 2268,
+      "extra_responses_resampling": 1204
+    },
+    {
+      "target_SE": 0.02,
+      "ref_p": 0.65,
+      "iid_N": 569,
+      "corrected_N_resampling": 1664,
+      "corrected_N_formula": 2064,
+      "extra_responses_resampling": 1095
+    },
+    {
+      "target_SE": 0.02,
+      "ref_p": 0.8,
+      "iid_N": 400,
+      "corrected_N_resampling": 1170,
+      "corrected_N_formula": 1451,
+      "extra_responses_resampling": 770
+    },
+    {
+      "target_SE": 0.03,
+      "ref_p": 0.5,
+      "iid_N": 278,
+      "corrected_N_resampling": 813,
+      "corrected_N_formula": 1008,
+      "extra_responses_resampling": 535
+    },
+    {
+      "target_SE": 0.03,
+      "ref_p": 0.65,
+      "iid_N": 253,
+      "corrected_N_resampling": 740,
+      "corrected_N_formula": 917,
+      "extra_responses_resampling": 487
+    },
+    {
+      "target_SE": 0.03,
+      "ref_p": 0.8,
+      "iid_N": 178,
+      "corrected_N_resampling": 520,
+      "corrected_N_formula": 645,
+      "extra_responses_resampling": 342
+    },
+    {
+      "target_SE": 0.05,
+      "ref_p": 0.5,
+      "iid_N": 100,
+      "corrected_N_resampling": 293,
+      "corrected_N_formula": 363,
+      "extra_responses_resampling": 193
+    },
+    {
+      "target_SE": 0.05,
+      "ref_p": 0.65,
+      "iid_N": 91,
+      "corrected_N_resampling": 267,
+      "corrected_N_formula": 331,
+      "extra_responses_resampling": 176
+    },
+    {
+      "target_SE": 0.05,
+      "ref_p": 0.8,
+      "iid_N": 64,
+      "corrected_N_resampling": 188,
+      "corrected_N_formula": 233,
+      "extra_responses_resampling": 124
+    }
+  ],
+  "split_half": {
+    "iid": {
+      "50": {
+        "stability": 0.8333720391218553,
+        "sd": 0.005929779634865016,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "100": {
+        "stability": 0.9076645440238542,
+        "sd": 0.0027057158484796034,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "200": {
+        "stability": 0.9516746513027653,
+        "sd": 0.0018615227837683794,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "400": {
+        "stability": 0.9750251857871919,
+        "sd": 0.0010096979423352456,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "800": {
+        "stability": 0.9873236257319263,
+        "sd": 0.0005420700971265411,
+        "n_items_used": 1246,
+        "reps": 30
+      }
+    },
+    "cluster": {
+      "50": {
+        "stability": 0.6789730391057627,
+        "sd": 0.015312319112101958,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "100": {
+        "stability": 0.7753102203096274,
+        "sd": 0.009796206728252021,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "200": {
+        "stability": 0.8276300631266127,
+        "sd": 0.007659220112714814,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "400": {
+        "stability": 0.8675936038493821,
+        "sd": 0.007499777381022725,
+        "n_items_used": 1246,
+        "reps": 30
+      },
+      "800": {
+        "stability": 0.9144958063921749,
+        "sd": 0.003744208585209882,
+        "n_items_used": 1240,
+        "reps": 30
+      }
+    },
+    "n_reach_0.9_iid": 94.8,
+    "n_reach_0.9_cluster": 676.4,
+    "n_ratio_cluster_over_iid": 7.13,
+    "n_items": 1246
+  },
+  "heterogeneity": {
+    "by_subject": [
+      {
+        "subject": "Number",
+        "n_items": 7098,
+        "icc_med": 0.126,
+        "deff_med": 3.705,
+        "mstar_med": 21.338
+      },
+      {
+        "subject": "Geometry and Measure",
+        "n_items": 3826,
+        "icc_med": 0.135,
+        "deff_med": 3.505,
+        "mstar_med": 19.045
+      },
+      {
+        "subject": "Algebra",
+        "n_items": 3246,
+        "icc_med": 0.14,
+        "deff_med": 3.817,
+        "mstar_med": 20.309
+      },
+      {
+        "subject": "Data and Statistics",
+        "n_items": 1470,
+        "icc_med": 0.138,
+        "deff_med": 3.371,
+        "mstar_med": 17.608
+      },
+      {
+        "subject": "Advanced Pure",
+        "n_items": 48,
+        "icc_med": 0.173,
+        "deff_med": 4.768,
+        "mstar_med": 18.265
+      },
+      {
+        "subject": "Maths-Others",
+        "n_items": 15,
+        "icc_med": 0.095,
+        "deff_med": 2.79,
+        "mstar_med": 22.125
+      },
+      {
+        "subject": "Science",
+        "n_items": 14,
+        "icc_med": 0.092,
+        "deff_med": 2.626,
+        "mstar_med": 18.707
+      }
+    ],
+    "by_difficulty": [
+      {
+        "diff_band": "hard(.02-.4)",
+        "n_items": 873,
+        "icc_med": 0.124,
+        "deff_med": 3.614
+      },
+      {
+        "diff_band": "medium(.4-.6)",
+        "n_items": 4753,
+        "icc_med": 0.133,
+        "deff_med": 3.729
+      },
+      {
+        "diff_band": "easy(.6-.8)",
+        "n_items": 7070,
+        "icc_med": 0.138,
+        "deff_med": 3.713
+      },
+      {
+        "diff_band": "very_easy(.8-.98)",
+        "n_items": 3021,
+        "icc_med": 0.116,
+        "deff_med": 3.262
+      }
+    ]
+  },
+  "robustness": {
+    "a_thresholds": {
+      "N>=100,k>=10": {
+        "n_items": 21174,
+        "icc_med": 0.12878396668616532,
+        "deff_med": 3.3610086245551383
+      },
+      "N>=100,k>=20": {
+        "n_items": 17736,
+        "icc_med": 0.13162867554744578,
+        "deff_med": 3.5010259053411383
+      },
+      "N>=100,k>=50": {
+        "n_items": 11815,
+        "icc_med": 0.13419444406974526,
+        "deff_med": 3.781164561768307
+      },
+      "N>=200,k>=10": {
+        "n_items": 15985,
+        "icc_med": 0.13164145583289769,
+        "deff_med": 3.6136438431892466
+      },
+      "N>=200,k>=20": {
+        "n_items": 15717,
+        "icc_med": 0.13210256194431555,
+        "deff_med": 3.627461166746232
+      },
+      "N>=200,k>=50": {
+        "n_items": 11810,
+        "icc_med": 0.13418866571610777,
+        "deff_med": 3.7812779924161335
+      },
+      "N>=500,k>=10": {
+        "n_items": 10388,
+        "icc_med": 0.1340624285164756,
+        "deff_med": 3.9092536484031957
+      },
+      "N>=500,k>=20": {
+        "n_items": 10388,
+        "icc_med": 0.1340624285164756,
+        "deff_med": 3.9092536484031957
+      },
+      "N>=500,k>=50": {
+        "n_items": 10312,
+        "icc_med": 0.13412512499150936,
+        "deff_med": 3.9064130619435082
+      }
+    },
+    "c_quizid_cluster": {
+      "n_items": 1651,
+      "icc_med": 0.08037769952181967,
+      "deff_med": 14.732437668712144
+    },
+    "c_quizid_spread": {
+      "n_quizzes": 17227,
+      "groups_per_quiz_median": 2,
+      "groups_per_quiz_mean": 12.09,
+      "groups_per_quiz_max": 428
+    },
+    "d_cap30": {
+      "n_items": 15717,
+      "icc_med": 0.127514855952069,
+      "deff_med": 2.623762773199707
+    },
+    "e_min_group2": {
+      "n_items": 15327,
+      "icc_med": 0.1311527324245524,
+      "deff_med": 3.682881689870777
+    },
+    "f_task34": {
+      "n_responses": 1382727,
+      "n_items": 725,
+      "icc_med": 0.1000035345194588,
+      "deff_med": 2.796668155422327
+    },
+    "b_latent_logistic_icc": {
+      "status": "ok",
+      "n_items": 300,
+      "latent_icc_med": 0.17137589913989362,
+      "linear_icc_med_same_items": 0.1247235
+    },
+    "m9_group_within_quiz": {
+      "n_strata": 3057,
+      "within_quiz_between_group_icc_median": 0.0977,
+      "within_quiz_between_group_icc_p25": 0.0374,
+      "within_quiz_between_group_icc_p75": 0.1544,
+      "frac_positive": 0.8492,
+      "raw_group_icc_median_ref": 0.132,
+      "note": "ICC across classrooms sharing the SAME quiz template; substantial value => classroom clustering is net of quiz template."
+    }
+  },
+  "gap_decomposition": {
+    "formula_deff_raw_icc_median": 3.657,
+    "formula_deff_debiased_icc_median": 3.683,
+    "resampling_deff_median": 2.925,
+    "raw_icc_median": 0.1311,
+    "debiased_icc_median": 0.1325,
+    "gap_closed_by_debias_frac": -0.036,
+    "note": "Debiasing ICC by a single-permutation null closes most of the formula-vs-resampling gap; residual is m* (burden-weighted cluster size) looseness for a ratio mean."
+  },
+  "second_corpus_assistments": {
+    "dataset": "ASSISTments 2009 skill-builder",
+    "n_responses": 525534,
+    "n_problems": 26688,
+    "n_classes": 250,
+    "n_schools": 75,
+    "n_students": 4217,
+    "overall_correct_rate": 0.6795,
+    "problem_class": {
+      "inclusion": ">=100 resp & >=10 classes",
+      "n_items": 291,
+      "median_resp": 134.0,
+      "median_classes": 17.0,
+      "icc_median": 0.2508,
+      "icc_p25": 0.1068,
+      "icc_p75": 0.4769,
+      "pct_icc_gt_0.05": 0.8419,
+      "deff_formula_median": 5.236,
+      "deff_resampling_median": 4.083,
+      "pct_deff_gt_1.5": 0.8832
+    },
+    "template_class": {
+      "inclusion": ">=200 resp & >=20 classes",
+      "n_items": 98,
+      "icc_median": 0.1285,
+      "deff_formula_median": 12.756
+    },
+    "problem_school": {
+      "inclusion": ">=100 resp & >=5 schools",
+      "n_items": 350,
+      "icc_median": 0.2274,
+      "deff_formula_median": 11.745
+    },
+    "perm_null": {
+      "n_items": 301,
+      "obs_icc_median": 0.2588,
+      "null_icc_median": 0.0918,
+      "frac_obs_gt_null95": 0.7807,
+      "note": "Certifies the ASSISTments classroom ICC is real classroom structure, not estimator artifact."
+    }
+  },
+  "decisions": {
+    "H1_supported": true,
+    "H2_supported": true,
+    "H3_naive_undercovers": true,
+    "H3_cluster_reaches_nominal": false,
+    "H3_verdict": "partially_supported",
+    "H3_cluster_improves_monotonically": true,
+    "discrimination_deff_smaller_than_difficulty": true,
+    "task34_replicates": true
+  }
+}
