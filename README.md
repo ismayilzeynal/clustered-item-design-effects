@@ -37,3 +37,14 @@ python results_gate.py        # assemble results/RESULTS.json (source of truth)
 python figures.py             # figures
 ```
 Global random seed: 20260711.
+
+## Author
+
+Ismayil Zeynalov, Baku State University, Baku, Azerbaijan.
+ORCID: [0009-0003-8067-5904](https://orcid.org/0009-0003-8067-5904).
+
+## Citation
+
+Zeynalov, I. (in press). How many students, or how many classrooms? Design effects for item
+analytics in clustered learning platforms. *Measurement: Interdisciplinary Research and
+Perspectives*. Accepted 4 August 2026; the DOI will be added here once the article is assigned one.
