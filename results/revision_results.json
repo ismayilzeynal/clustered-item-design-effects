@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "seed": 20260711,
+    "note": "Revision analyses (R1). Exploratory relative to the frozen pre-registration."
+  },
+  "RV4_class_size": {
+    "caps": [
+      {
+        "m_cap": 1,
+        "n_items_analytic": 0,
+        "median_icc": NaN,
+        "median_mstar": NaN,
+        "median_deff_analytic": NaN,
+        "median_deff_bootstrap": 1.002,
+        "n_items_bootstrap": 398
+      },
+      {
+        "m_cap": 2,
+        "n_items_analytic": 1499,
+        "median_icc": 0.1283,
+        "median_mstar": 1.884,
+        "median_deff_analytic": 1.112,
+        "median_deff_bootstrap": 1.11,
+        "n_items_bootstrap": 400
+      },
+      {
+        "m_cap": 3,
+        "n_items_analytic": 1500,
+        "median_icc": 0.1289,
+        "median_mstar": 2.751,
+        "median_deff_analytic": 1.227,
+        "median_deff_bootstrap": 1.216,
+        "n_items_bootstrap": 400
+      },
+      {
+        "m_cap": 5,
+        "n_items_analytic": 1499,
+        "median_icc": 0.1291,
+        "median_mstar": 4.422,
+        "median_deff_analytic": 1.439,
+        "median_deff_bootstrap": 1.433,
+        "n_items_bootstrap": 400
+      },
+      {
+        "m_cap": 8,
+        "n_items_analytic": 1500,
+        "median_icc": 0.1306,
+        "median_mstar": 6.708,
+        "median_deff_analytic": 1.732,
+        "median_deff_bootstrap": 1.657,
+        "n_items_bootstrap": 400
+      },
+      {
+        "m_cap": 12,
+        "n_items_analytic": 1500,
+        "median_icc": 0.1277,
+        "median_mstar": 9.302,
+        "median_deff_analytic": 2.052,
+        "median_deff_bootstrap": 1.995,
+        "n_items_bootstrap": 400
+      },
+      {
+        "m_cap": 20,
+        "n_items_analytic": 1500,
+        "median_icc": 0.1279,
+        "median_mstar": 12.613,
+        "median_deff_analytic": 2.457,
+        "median_deff_bootstrap": 2.301,
+        "n_items_bootstrap": 400
+      },
+      {
+        "m_cap": 30,
+        "n_items_analytic": 1500,
+        "median_icc": 0.1276,
+        "median_mstar": 13.891,
+        "median_deff_analytic": 2.617,
+        "median_deff_bootstrap": 2.463,
+        "n_items_bootstrap": 400
+      },
+      {
+        "m_cap": "full",
+        "n_items_analytic": 1500,
+        "median_icc": 0.1311,
+        "median_mstar": 20.257,
+        "median_deff_analytic": 3.657,
+        "median_deff_bootstrap": 2.946,
+        "n_items_bootstrap": 400
+      }
+    ],
+    "retain50": {
+      "n_items": 1500,
+      "median_deff_full": 3.657,
+      "median_deff_half": 2.311,
+      "median_N_full": 748.0,
+      "median_N_half": 404.0,
+      "median_neff_full": 214.3,
+      "median_neff_half": 182.9,
+      "median_neff_ratio_half_over_full": 0.858,
+      "note": "Retaining 50% of each class halves total responses but the design effect falls (m* halves), so effective sample loss is less than half."
+    }
+  },
+  "RV7_cluster_coverage_by_classes": {
+    "by_classes": [
+      {
+        "n_classes": 10,
+        "n_items_eligible": 500,
+        "mean_responses": 93.3,
+        "naive_coverage": 0.7391,
+        "cluster_coverage": 0.8425,
+        "naive_width": 0.1968,
+        "cluster_width": 0.2851,
+        "R": 800
+      },
+      {
+        "n_classes": 20,
+        "n_items_eligible": 500,
+        "mean_responses": 186.4,
+        "naive_coverage": 0.7271,
+        "cluster_coverage": 0.8848,
+        "naive_width": 0.1372,
+        "cluster_width": 0.2163,
+        "R": 800
+      },
+      {
+        "n_classes": 40,
+        "n_items_eligible": 500,
+        "mean_responses": 373.0,
+        "naive_coverage": 0.7146,
+        "cluster_coverage": 0.9172,
+        "naive_width": 0.0959,
+        "cluster_width": 0.1638,
+        "R": 800
+      },
+      {
+        "n_classes": 80,
+        "n_items_eligible": 500,
+        "mean_responses": 746.3,
+        "naive_coverage": 0.7373,
+        "cluster_coverage": 0.9447,
+        "naive_width": 0.0673,
+        "cluster_width": 0.1266,
+        "R": 800
+      }
+    ],
+    "note": "Cluster-robust 95% CI coverage of item difficulty when exactly C whole classes are drawn. Coverage climbs toward nominal as C grows; it falls short at few classes (finite-cluster limitation of clustered SEs)."
+  },
+  "RV5_discrimination_table": {
+    "deff_disc_median": 1.415,
+    "disc_median": 0.386,
+    "se_formula": "SE(r) ~= (1 - r^2)/sqrt(n-1); n_iid = ((1-r^2)/SE)^2 + 1; corrected = n_iid x deff_disc",
+    "rows": [
+      {
+        "target_SE": 0.02,
+        "ref_disc_r": 0.2,
+        "iid_N": 2305,
+        "corrected_N": 3263,
+        "extra_responses": 958
+      },
+      {
+        "target_SE": 0.02,
+        "ref_disc_r": 0.35,
+        "iid_N": 1927,
+        "corrected_N": 2728,
+        "extra_responses": 801
+      },
+      {
+        "target_SE": 0.02,
+        "ref_disc_r": 0.5,
+        "iid_N": 1408,
+        "corrected_N": 1993,
+        "extra_responses": 585
+      },
+      {
+        "target_SE": 0.03,
+        "ref_disc_r": 0.2,
+        "iid_N": 1025,
+        "corrected_N": 1451,
+        "extra_responses": 426
+      },
+      {
+        "target_SE": 0.03,
+        "ref_disc_r": 0.35,
+        "iid_N": 857,
+        "corrected_N": 1214,
+        "extra_responses": 357
+      },
+      {
+        "target_SE": 0.03,
+        "ref_disc_r": 0.5,
+        "iid_N": 626,
+        "corrected_N": 887,
+        "extra_responses": 261
+      },
+      {
+        "target_SE": 0.05,
+        "ref_disc_r": 0.2,
+        "iid_N": 370,
+        "corrected_N": 524,
+        "extra_responses": 154
+      },
+      {
+        "target_SE": 0.05,
+        "ref_disc_r": 0.35,
+        "iid_N": 310,
+        "corrected_N": 439,
+        "extra_responses": 129
+      },
+      {
+        "target_SE": 0.05,
+        "ref_disc_r": 0.5,
+        "iid_N": 226,
+        "corrected_N": 320,
+        "extra_responses": 94
+      }
+    ]
+  }
+}

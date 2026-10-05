@@ -1,0 +1,36 @@
+{
+  "note": "Additional analysis, not reported in the article.",
+  "seed": 20261611,
+  "R_per_item": 200,
+  "B": 999,
+  "weights": "Webb six-point",
+  "n_items": 500,
+  "10": {
+    "n_draws": 100000,
+    "z_CR1": 0.84095,
+    "t_CR1": 0.88155,
+    "t_crit": 2.2621571628540993,
+    "WCR_webb": 0.93468
+  },
+  "20": {
+    "n_draws": 100000,
+    "z_CR1": 0.88597,
+    "t_CR1": 0.90495,
+    "t_crit": 2.093024054408263,
+    "WCR_webb": 0.93963
+  },
+  "40": {
+    "n_draws": 100000,
+    "z_CR1": 0.916,
+    "t_CR1": 0.92454,
+    "t_crit": 2.0226909200367604,
+    "WCR_webb": 0.94326
+  },
+  "80": {
+    "n_draws": 100000,
+    "z_CR1": 0.94595,
+    "t_CR1": 0.9487,
+    "t_crit": 1.9904502102301282,
+    "WCR_webb": 0.95568
+  }
+}

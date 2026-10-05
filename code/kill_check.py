@@ -6,6 +6,7 @@ Core question: within an item, do multiple students share the same GroupId
 design-effects argument collapses. Also compute a first ICC read for a handful
 of high-volume items to confirm nonzero within-class correlation of IsCorrect.
 """
+import os
 import numpy as np
 import pandas as pd
 import pyarrow.parquet as pq

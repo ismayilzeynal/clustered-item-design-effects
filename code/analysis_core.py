@@ -6,7 +6,7 @@ Vectorized: per-item ANOVA ICC is computed from (item, group) aggregates
 Writes per-item atlas CSV, subject/difficulty breakdowns, student totals (for A7),
 fixed random item subsamples (for A2/A4/A5/A7), and headline JSON.
 """
-import json, zipfile, io, hashlib
+import json, os, zipfile, io, hashlib
 import numpy as np
 import pandas as pd
 import pyarrow.parquet as pq

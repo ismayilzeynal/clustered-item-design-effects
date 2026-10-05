@@ -1,0 +1,102 @@
+{
+  "note": "Additional analysis, not reported in the article. Same seeds and draw sequence as analysis_resample2.py (A5) and analysis_revision.py (RV7); the article's coverages are reproduced exactly.",
+  "n_items": 500,
+  "classes_per_item": {
+    "min": 96,
+    "median": 214.0,
+    "max": 678
+  },
+  "budget_stopping_A5": {
+    "100": {
+      "naive_coverage": 0.728909,
+      "cluster_coverage": 0.846558,
+      "mean_clusters_drawn": 12.605458,
+      "n_draws": 1000000,
+      "one_class_draws": 4054,
+      "one_class_frac": 0.004054,
+      "items_with_any_one_class_draw": 427,
+      "max_one_class_frac_single_item": 0.011,
+      "cluster_coverage_excl_one_class": 0.8492749606906399,
+      "cluster_coverage_among_one_class": 0.17908238776517021,
+      "t_ref_coverage_excl_one_class": 0.8857930048416279,
+      "draws_with_2_to_5_classes": 24299,
+      "p10_p50_p90_clusters": [
+        8.0,
+        12.0,
+        18.0
+      ]
+    },
+    "200": {
+      "naive_coverage": 0.712095,
+      "cluster_coverage": 0.870796,
+      "mean_clusters_drawn": 23.907289,
+      "n_draws": 1000000,
+      "one_class_draws": 1476,
+      "one_class_frac": 0.001476,
+      "items_with_any_one_class_draw": 171,
+      "max_one_class_frac_single_item": 0.009,
+      "cluster_coverage_excl_one_class": 0.8718999242882495,
+      "cluster_coverage_among_one_class": 0.12398373983739837,
+      "t_ref_coverage_excl_one_class": 0.8919314908805397,
+      "draws_with_2_to_5_classes": 9761,
+      "p10_p50_p90_clusters": [
+        15.0,
+        24.0,
+        33.0
+      ]
+    },
+    "400": {
+      "naive_coverage": 0.692722,
+      "cluster_coverage": 0.904453,
+      "mean_clusters_drawn": 46.054308,
+      "n_draws": 1000000,
+      "one_class_draws": 92,
+      "one_class_frac": 9.2e-05,
+      "items_with_any_one_class_draw": 14,
+      "max_one_class_frac_single_item": 0.0055,
+      "cluster_coverage_excl_one_class": 0.9045252163199015,
+      "cluster_coverage_among_one_class": 0.11956521739130435,
+      "t_ref_coverage_excl_one_class": 0.913370030042764,
+      "draws_with_2_to_5_classes": 736,
+      "p10_p50_p90_clusters": [
+        30.0,
+        46.0,
+        61.0
+      ]
+    }
+  },
+  "fixed_class_count_RV7": {
+    "10": {
+      "naive_coverage": 0.739115,
+      "cluster_coverage_z_CR1": 0.8425075,
+      "cluster_coverage_t_CR1": 0.882575,
+      "t_crit": 2.2621571628540993,
+      "cluster_coverage_z_CR0": 0.82628,
+      "n_draws": 400000
+    },
+    "20": {
+      "naive_coverage": 0.7271275,
+      "cluster_coverage_z_CR1": 0.8848375,
+      "cluster_coverage_t_CR1": 0.903405,
+      "t_crit": 2.093024054408263,
+      "cluster_coverage_z_CR0": 0.877055,
+      "n_draws": 400000
+    },
+    "40": {
+      "naive_coverage": 0.714565,
+      "cluster_coverage_z_CR1": 0.91724,
+      "cluster_coverage_t_CR1": 0.92521,
+      "t_crit": 2.0226909200367604,
+      "cluster_coverage_z_CR0": 0.9138475,
+      "n_draws": 400000
+    },
+    "80": {
+      "naive_coverage": 0.737275,
+      "cluster_coverage_z_CR1": 0.9447425,
+      "cluster_coverage_t_CR1": 0.94746,
+      "t_crit": 1.9904502102301282,
+      "cluster_coverage_z_CR0": 0.9435275,
+      "n_draws": 400000
+    }
+  }
+}
